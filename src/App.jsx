@@ -78,6 +78,15 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const handleDownload = () => {
+  const link = document.createElement("a");
+  link.href = "/MyResume_Romy.pdf"; // Ensure this is in your 'public' folder
+  link.download = "Romy_Resume.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
   return (
     <div
       className={`font-display min-h-screen overflow-x-hidden text-[#123237] selection:bg-primary selection:text-white dark:text-[#f8f6f6] ${
@@ -91,9 +100,7 @@ function App() {
       >
         <div className="flex items-center justify-between rounded-full border border-white/50 bg-white/80 px-6 py-3 shadow-sm backdrop-blur-md dark:border-white/10 dark:bg-[#12363a]/80">
           <div className="group flex cursor-pointer items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white transition-transform group-hover:rotate-12">
-              <span className="material-symbols-outlined text-[20px]">palette</span>
-            </div>
+           <img className="h-10 w-15" src="white.png" alt="r23" />
             <span className="text-lg font-bold tracking-tight">R23 GFX</span>
           </div>
           <div className="hidden items-center gap-8 md:flex">
@@ -117,7 +124,7 @@ function App() {
             </a>
           </div>
           <div className="hidden items-center gap-2 sm:flex">
-            <button className="flex items-center justify-center rounded-full bg-primary px-5 py-2 text-sm font-bold text-white shadow-md transition-all hover:scale-105 hover:shadow-lg active:scale-95">
+            <button onClick={handleDownload} className="flex items-center justify-center rounded-full bg-primary px-5 py-2 text-sm font-bold text-white shadow-md transition-all hover:scale-105 hover:shadow-lg active:scale-95 cursor-pointer">
               Download Resume
             </button>
             <button
@@ -203,7 +210,7 @@ function App() {
             Contact
           </a>
         </nav>
-        <button className="mt-8 w-full rounded-full bg-primary px-5 py-3 text-sm font-bold text-white shadow-md transition-all hover:shadow-lg">
+        <button onClick={handleDownload} className="mt-8 w-full rounded-full bg-primary px-5 py-3 text-sm font-bold text-white shadow-md transition-all hover:shadow-lg cursor-pointer">
           Download Resume
         </button>
       </aside>
@@ -213,7 +220,7 @@ function App() {
           path="/"
           element={
             <>
-              <main className="relative mx-auto flex w-full max-w-7xl flex-grow flex-col items-center px-4 pb-20 pt-10 sm:px-6 lg:px-8">
+              <main className="relative mx-auto flex w-full max-w-7xl flex-grow flex-col items-center px-4 pb-20 pt-24 sm:px-6 sm:pt-10 lg:px-8">
         <div className="pointer-events-none absolute left-[5%] top-20 text-primary opacity-20 float-animation">
           <span className="material-symbols-outlined text-6xl">star</span>
         </div>
@@ -392,29 +399,6 @@ function App() {
               </div>
             </div>
 
-            <div className="group flex cursor-pointer flex-col gap-4 lg:mt-12">
-              <div className="relative aspect-square w-full overflow-hidden rounded-full border-8 border-white shadow-lg transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-xl dark:border-[#12363a]">
-                <img
-                  alt="Neon lights and retro synthwave aesthetic gradient background"
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdAFgFT4FK4DGMeW_DAHVIkIdSGYGUwKJgCScViXVRMU9AQOlbl5aVUzYDpavzXznwZyiLtn4Rd9Z2wdfF-lxfAC47lP-yIABeEToz2xOBoyTqJpy14p3WWUJLQtE1sErsa0_U-NdEhHt389FoNC0F2_BDK0jPQC0GFE6fYES15PV2UNeAXpBnzCI1dqkGV9R6ORzHeyRtGtc_hjJ5ASLavZEshRIeuK2ZBAArp0K9mu_DRFGVSV6bV-TzqEkwpKWPCBRNOTPaxRP0"
-                />
-                <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  <span className="material-symbols-outlined text-4xl text-white">
-                    visibility
-                  </span>
-                </div>
-              </div>
-              <div className="text-center">
-                <h3 className="text-xl font-bold transition-colors group-hover:text-primary">
-                  Neon Nights
-                </h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Event Design
-                </p>
-              </div>
-            </div>
-
             <div className="group flex cursor-pointer flex-col gap-4 sm:mt-12 lg:mt-0">
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[3rem] bg-white shadow-lg transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-xl dark:bg-[#12363a]">
                 <img
@@ -457,6 +441,29 @@ function App() {
                 </h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   Art Direction
+                </p>
+              </div>
+            </div>
+            
+            <div className="group flex cursor-pointer flex-col gap-4 sm:mt-12 lg:mt-0">
+              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[3rem] bg-white shadow-lg transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-xl dark:bg-[#12363a]">
+                <img
+                  alt="Poster"
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  src="CEBU64.jpg"
+                />
+                <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/50 to-transparent p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <span className="rounded-full bg-white px-4 py-2 text-sm font-bold text-black">
+                    View Project
+                  </span>
+                </div>
+              </div>
+              <div className="text-center">
+                <h3 className="text-xl font-bold transition-colors group-hover:text-primary">
+                  Event Poster
+                </h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  Photography
                 </p>
               </div>
             </div>
@@ -537,11 +544,7 @@ function App() {
                 <div className="mx-auto flex max-w-[960px] flex-col items-center justify-between gap-10 md:flex-row">
                   <div className="flex flex-col items-center gap-4 md:items-start">
                     <div className="flex items-center gap-2">
-                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white">
-                        <span className="material-symbols-outlined text-[20px]">
-                          palette
-                        </span>
-                      </div>
+                      <img className="h-10 w-15" src="white.png" alt="r23" />
                       <span className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
                         R23 GFX
                       </span>
