@@ -6,6 +6,7 @@ import About from './navbarcontent/About.jsx'
 function App() {
   const [isDark, setIsDark] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isNavVisible, setIsNavVisible] = useState(true)
   const location = useLocation()
 
   useEffect(() => {
@@ -47,13 +48,47 @@ function App() {
     return () => observer.disconnect()
   }, [location.pathname])
 
+  useEffect(() => {
+    let lastScrollY = window.scrollY
+    let ticking = false
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const scrollingDown = currentScrollY > lastScrollY
+          const beyondRevealPoint = currentScrollY > 80
+
+          if (!beyondRevealPoint) {
+            setIsNavVisible(true)
+          } else {
+            setIsNavVisible(!scrollingDown)
+          }
+
+          lastScrollY = currentScrollY
+          ticking = false
+        })
+
+        ticking = true
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
     <div
       className={`font-display min-h-screen overflow-x-hidden text-[#123237] selection:bg-primary selection:text-white dark:text-[#f8f6f6] ${
         isDark ? 'bg-dark-gradient' : 'bg-joyful-gradient'
       }`}
     >
-      <nav className="sticky top-4 z-50 mx-auto w-full max-w-[960px] px-4">
+      <nav
+        className={`fixed left-1/2 top-4 z-50 w-full max-w-[960px] -translate-x-1/2 px-4 transition-transform duration-300 ${
+          isNavVisible ? 'translate-y-0' : '-translate-y-24'
+        }`}
+      >
         <div className="flex items-center justify-between rounded-full border border-white/50 bg-white/80 px-6 py-3 shadow-sm backdrop-blur-md dark:border-white/10 dark:bg-[#12363a]/80">
           <div className="group flex cursor-pointer items-center gap-2">
             <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white transition-transform group-hover:rotate-12">
@@ -83,7 +118,7 @@ function App() {
           </div>
           <div className="hidden items-center gap-2 sm:flex">
             <button className="flex items-center justify-center rounded-full bg-primary px-5 py-2 text-sm font-bold text-white shadow-md transition-all hover:scale-105 hover:shadow-lg active:scale-95">
-              Work with Me
+              Download Resume
             </button>
             <button
               aria-label="Toggle dark mode"
@@ -169,7 +204,7 @@ function App() {
           </a>
         </nav>
         <button className="mt-8 w-full rounded-full bg-primary px-5 py-3 text-sm font-bold text-white shadow-md transition-all hover:shadow-lg">
-          Work with Me
+          Download Resume
         </button>
       </aside>
 
@@ -303,7 +338,7 @@ function App() {
               </div>
               <div className="text-center">
                 <h3 className="text-xl font-bold transition-colors group-hover:text-primary">
-                  Social Media Posters
+                  Social Media Poster
                 </h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   Photoshop &amp; Illustrator
@@ -314,9 +349,9 @@ function App() {
             <div className="group mt-0 flex cursor-pointer flex-col gap-4 sm:mt-12">
               <div className="relative aspect-square w-full overflow-hidden rounded-full border-8 border-white shadow-lg transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-xl dark:border-[#12363a]">
                 <img
-                  alt="Bright and joyful abstract digital art with pink and blue gradients"
+                  alt="Logo"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqdNs327froGgY4p3inlQNTO_M595We9Ckdc5cRWR1hZBYvdFpkNsY3iW2aafNWg2JeareXji3j2qpCEA3L8FxLMbLtql3SvYi-_AeCLdMHz-4399AK1oEA6UKGy06I8plcU0oiYP6eCC6hjrGLnuv82ENIGyXu3Q0qqLHxiRKKeXq-4Zt8sjoeXoypUsjadBLv8SGQUg7r704o2AAXGdiNivHOWzKEUyNADBFjzY69Dd3PLZAyeLb23mRf4WcFYxTDOUVJqmga48D"
+                  src="Z&ZGUPPYFARM.png"
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   <span className="material-symbols-outlined text-4xl text-white">
@@ -326,10 +361,10 @@ function App() {
               </div>
               <div className="text-center">
                 <h3 className="text-xl font-bold transition-colors group-hover:text-primary">
-                  Kids Book Illustration
+                  Logo Design
                 </h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Digital Art
+                  Illustrator
                 </p>
               </div>
             </div>
@@ -343,13 +378,13 @@ function App() {
                 />
                 <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/50 to-transparent p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   <span className="rounded-full bg-white px-4 py-2 text-sm font-bold text-black">
-                    View Projects
+                    View Project
                   </span>
                 </div>
               </div>
               <div className="text-center">
                 <h3 className="text-xl font-bold transition-colors group-hover:text-primary">
-                  Festival Branding
+                  Food Tarpaulin
                 </h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   Visual Identity
@@ -383,9 +418,9 @@ function App() {
             <div className="group flex cursor-pointer flex-col gap-4 sm:mt-12 lg:mt-0">
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[3rem] bg-white shadow-lg transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-xl dark:bg-[#12363a]">
                 <img
-                  alt="Pastel colored marshmallows and sweets in a playful arrangement"
+                  alt="Poster"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_3SU4p-Ue9XsDT7DuFjtIrcbN-YxrRqJcGdixt9eAmZsdrYfynUKH12FwOUDpgfiyP8DyXRRlSpS4pawZMl9Ki36AL2gJrrb4YvSAxDNGB02REV5xOkeCPs4GcLJuNNvBI5PZtcCY2NszCKgLU0UE28HNxkiCXzemA6fnXGt6xuRZthuR1Cb-Or29BZrPZcjC1K6d9VlmIHJW8l5OuiiK0_Rm96SD_hSWDSzrieLfQ1Vg-5iVET-8jE3D3gRihEBNNn9kcWFKXQZR"
+                  src="CEBU64.jpg"
                 />
                 <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/50 to-transparent p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   <span className="rounded-full bg-white px-4 py-2 text-sm font-bold text-black">
@@ -395,7 +430,7 @@ function App() {
               </div>
               <div className="text-center">
                 <h3 className="text-xl font-bold transition-colors group-hover:text-primary">
-                  Sweet Treats
+                  Event Poster
                 </h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   Photography
@@ -549,7 +584,7 @@ function App() {
                           <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
                         </svg>
                       </a>
-                      <a className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-gray-600 transition-all hover:bg-primary hover:text-white dark:bg-white/5 dark:text-gray-300" href="#">
+                      <a className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-gray-600 transition-all hover:bg-primary hover:text-white dark:bg-white/5 dark:text-gray-300" href="https://github.com/RomyJr2003">
                         <svg aria-hidden="true" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                           <path
                             clipRule="evenodd"
