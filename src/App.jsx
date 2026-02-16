@@ -1,11 +1,13 @@
 ﻿import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Navbar from './components/navbar.jsx';
+import Navbar from './navbarcontent/navbar.jsx';
 import Homepage from './components/homepage.jsx';
 import About from './navbarcontent/About.jsx';
 import Contacts from './navbarcontent/contact.jsx';
 import TermsAndConditions from './footercontent/terms.jsx';
 import PreLoading from './components/preloading.jsx';
+import Designs from './components/designs.jsx';
+import ScrollToTop from './components/ScrollToTop.jsx';
 
 function App() {
   // Move preloading state here so it persists across page navigation
@@ -39,10 +41,13 @@ function App() {
         </div>
       )}
       
+      <ScrollToTop />
+      
       <Routes>
-        <Route element={<Navbar />}>
+          <Route element={<Navbar />}>
           <Route path="/" element={<Homepage />} />
           <Route path="/about" element={<About />} />
+          <Route path="/designs" element={<Designs />} />
           <Route path="/contact" element={<Contacts />} />
           <Route path="/terms" element={<TermsAndConditions />} />
         </Route>

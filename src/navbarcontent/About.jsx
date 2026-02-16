@@ -15,7 +15,7 @@ function About() {
               I have experience in various editing softwares, and I enjoy working on social media poster, mockup, and illustration projects. 
               In my free time, I like to explore new design trends and techniques.
             </p>
-            <p className="pt-2 text-sm font-medium text-gray-600 dark:text-gray-300">Technical Skills:</p>
+            <p className="pt-2 text-sm font-medium text-gray-600 dark:text-gray-300">Software Skills:</p>
             <div className="item-start mt-2 flex gap-2">
               <img className="size-15" src="/photoshop.png" alt="Photoshop" />
               <img className="size-15" src="/illustrator.png" alt="Illustrator" />

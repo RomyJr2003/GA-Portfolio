@@ -1,9 +1,29 @@
-import { useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { useLocation, Link } from 'react-router-dom'
 import r23 from '../assets/r23.jpg'
 
 function Homepage() {
   const location = useLocation()
+  const [selectedImage, setSelectedImage] = useState(null)
+
+  // Function to open modal with image
+  const openModal = (imageSrc) => {
+    setSelectedImage(imageSrc)
+  }
+
+  // Function to close modal
+  const closeModal = () => {
+    setSelectedImage(null)
+  }
+
+  // Close modal on Escape key
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape') closeModal()
+    }
+    window.addEventListener('keydown', handleEscape)
+    return () => window.removeEventListener('keydown', handleEscape)
+  }, [])
 
   useEffect(() => {
     const elements = document.querySelectorAll('[data-animate]')
@@ -28,6 +48,34 @@ function Homepage() {
 
   return (
     <>
+      {/* Image Modal */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm"
+          onClick={closeModal}
+        >
+          <div
+            className="relative max-h-[90vh] max-w-5xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close button */}
+            <button
+              onClick={closeModal}
+              className="absolute -right-4 -top-4 flex h-10 w-10 items-center justify-center rounded-full bg-white text-gray-900 shadow-lg transition-transform hover:scale-110 dark:bg-gray-800 dark:text-white"
+            >
+              <span className="material-symbols-outlined">close</span>
+            </button>
+
+            {/* Image */}
+            <img
+              src={selectedImage}
+              alt="Project"
+              className="max-h-[90vh] w-auto rounded-2xl shadow-2xl"
+            />
+          </div>
+        </div>
+      )}
+
       <main className="relative mx-auto flex w-full max-w-7xl flex-grow flex-col items-center px-4 pb-20 pt-24 sm:px-6 sm:pt-10 lg:px-8">
         <div className="pointer-events-none absolute left-[5%] top-20 text-primary opacity-20 float-animation">
           <span className="material-symbols-outlined text-6xl">star</span>
@@ -73,7 +121,7 @@ function Homepage() {
             </p>
             <div className="flex justify-center gap-4 pt-2 md:justify-start">
               <button className="rounded-full bg-primary px-8 py-3 font-bold text-white shadow-lg shadow-primary/25 transition-all hover:-translate-y-1 hover:bg-primary/90">
-                View My Work
+                <Link to="/designs">View My Work</Link>
               </button>
               <button className="rounded-full border border-gray-200 bg-white px-8 py-3 font-bold text-gray-800 shadow-sm transition-all hover:-translate-y-1 hover:bg-gray-50 dark:border-white/10 dark:bg-white/10 dark:text-black">
                 About Me
@@ -129,16 +177,19 @@ function Homepage() {
                 test new render engines, and explore the weird side of digital art.
               </p>
             </div>
-            <a className="hidden items-center gap-1 font-bold text-primary transition-all hover:gap-2 sm:flex" href="#">
+            <Link className="hidden items-center gap-1 font-bold text-primary transition-all hover:gap-2 sm:flex" to="/designs">
               See All
               <span className="material-symbols-outlined text-sm">
                 arrow_forward
               </span>
-            </a>
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 gap-8 px-4 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="group flex cursor-pointer flex-col gap-4">
+            <div 
+              className="group flex cursor-pointer flex-col gap-4"
+              onClick={() => openModal('pizza.jpg')}
+            >
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[3rem] bg-white shadow-lg transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-xl dark:bg-[#12363a]">
                 <img
                   alt="Pizza"
@@ -147,7 +198,7 @@ function Homepage() {
                 />
                 <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/50 to-transparent p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   <span className="rounded-full bg-white px-4 py-2 text-sm font-bold text-black">
-                    View Projects
+                    View Project
                   </span>
                 </div>
               </div>
@@ -161,7 +212,10 @@ function Homepage() {
               </div>
             </div>
 
-            <div className="group mt-0 flex cursor-pointer flex-col gap-4 sm:mt-12">
+            <div 
+              className="group mt-0 flex cursor-pointer flex-col gap-4 sm:mt-12"
+              onClick={() => openModal('Z&ZGUPPYFARM.png')}
+            >
               <div className="relative aspect-square w-full overflow-hidden rounded-full border-8 border-white shadow-lg transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-xl dark:border-[#12363a]">
                 <img
                   alt="Logo"
@@ -184,7 +238,10 @@ function Homepage() {
               </div>
             </div>
 
-            <div className="group flex cursor-pointer flex-col gap-4">
+            <div 
+              className="group flex cursor-pointer flex-col gap-4"
+              onClick={() => openModal('burger.jpg')}
+            >
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[3rem] bg-white shadow-lg transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-xl dark:bg-[#12363a]">
                 <img
                   alt="Arrangement of colorful roses and flowers on a pink background"
@@ -207,7 +264,10 @@ function Homepage() {
               </div>
             </div>
 
-            <div className="group flex cursor-pointer flex-col gap-4 sm:mt-12 lg:mt-0">
+            <div 
+              className="group flex cursor-pointer flex-col gap-4 sm:mt-12 lg:mt-0"
+              onClick={() => openModal('CEBU64.jpg')}
+            >
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[3rem] bg-white shadow-lg transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-xl dark:bg-[#12363a]">
                 <img
                   alt="Poster"
@@ -230,7 +290,10 @@ function Homepage() {
               </div>
             </div>
 
-            <div className="group flex cursor-pointer flex-col gap-4 sm:mt-0 lg:mt-12">
+            <div 
+              className="group flex cursor-pointer flex-col gap-4 sm:mt-0 lg:mt-12"
+              onClick={() => openModal('https://lh3.googleusercontent.com/aida-public/AB6AXuB1P2hUYpG6TswPUAMThA1Ab70lrbiKVtTLjQZgHYV6bGbdAwmjvornVlMR2KIBslRTdPF0aXaddRHvI1wqN8vklB53w2ZEa0_k0kwRl78HzuoQqUXyFVd_I3TFYqMVODZSIGtiXFHvYTPLyyXnOPht9_aWWTIafqWkM34yJNGAA7EQDUGJfV3MDkjCMk7lR482QNjK7JuNUxz7CfcZj_8BY3gNKbmxUd9Lm0j1lOI0HmtwniRO8nm6EPLMVeLD6GvxP5kjrOctUPFf')}
+            >
               <div className="relative aspect-square w-full overflow-hidden rounded-full border-8 border-white shadow-lg transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-xl dark:border-[#12363a]">
                 <img
                   alt="Yellow and pink abstract fluid painting texture"
@@ -253,7 +316,10 @@ function Homepage() {
               </div>
             </div>
             
-            <div className="group flex cursor-pointer flex-col gap-4 sm:mt-12 lg:mt-0">
+            <div 
+              className="group flex cursor-pointer flex-col gap-4 sm:mt-12 lg:mt-0"
+              onClick={() => openModal('CEBU64.jpg')}
+            >
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[3rem] bg-white shadow-lg transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-xl dark:bg-[#12363a]">
                 <img
                   alt="Poster"
@@ -411,9 +477,9 @@ function Homepage() {
             <a className="transition-colors hover:text-primary" href="#">
               Privacy
             </a>
-            <a className="transition-colors hover:text-primary" href="/terms">
+            <Link className="transition-colors hover:text-primary" to="/terms">
               Terms
-            </a>
+            </Link>
           </div>
         </div>
       </footer>

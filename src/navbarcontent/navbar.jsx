@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, Outlet } from 'react-router-dom'
 
-function Layout() {
+function Navbar() {
   const [isDark, setIsDark] = useState(() => {
     const stored = localStorage.getItem('theme')
     if (stored) return stored === 'dark'
@@ -205,4 +205,4 @@ function Layout() {
   );
 }
 
-export default Layout
+export default Navbar
