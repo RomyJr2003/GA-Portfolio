@@ -98,20 +98,8 @@ function Homepage() {
             </div>
             <h1 className="text-4xl font-black leading-[1.1] tracking-tight text-gray-900 dark:text-white sm:text-5xl md:text-6xl">
               Making the World <br />
-              <span className="relative inline-block text-primary">
+              <span className="relative inline-block text-primary pr-2">
                 Brighter
-                <svg
-                  className="absolute -bottom-2 left-0 h-3 w-full text-primary/30"
-                  preserveAspectRatio="none"
-                  viewBox="0 0 100 10"
-                >
-                  <path
-                    d="M0 5 Q 50 10 100 5"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="4"
-                  />
-                </svg>
               </span>
               One Pixel at a Time
             </h1>
@@ -445,7 +433,7 @@ function Homepage() {
               </a>
             </div>
             <div className="flex gap-4">
-              <a className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-gray-600 transition-all hover:bg-primary hover:text-white dark:bg-white/5 dark:text-gray-300" href="#">
+              <a className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-gray-600 transition-all hover:bg-primary hover:text-white dark:bg-white/5 dark:text-gray-300" href="https://www.instagram.com/jrfrmntr">
                 <svg aria-hidden="true" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                   <path
                     clipRule="evenodd"
@@ -454,9 +442,9 @@ function Homepage() {
                   />
                 </svg>
               </a>
-              <a className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-gray-600 transition-all hover:bg-primary hover:text-white dark:bg-white/5 dark:text-gray-300" href="#">
+              <a className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-gray-600 transition-all hover:bg-primary hover:text-white dark:bg-white/5 dark:text-gray-300" href="https://www.behance.net/romyformentera">
                 <svg aria-hidden="true" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                  <path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988h-6.466v-14.967h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zm-3.466-8.988h3.584c2.508 0 2.906-3-.312-3h-3.272v3zm3.391 3h-3.391v3.016h3.341c3.055 0 2.868-3.016.05-3.016z"/>
                 </svg>
               </a>
               <a className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-gray-600 transition-all hover:bg-primary hover:text-white dark:bg-white/5 dark:text-gray-300" href="https://github.com/RomyJr2003">
@@ -474,9 +462,9 @@ function Homepage() {
         <div className="mx-auto mt-8 flex max-w-[960px] flex-col items-center justify-between gap-4 border-t border-gray-100 pt-8 text-xs text-gray-400 dark:border-white/5 sm:flex-row">
           <p>2026 R23 GFX Portfolio. All rights reserved.</p>
           <div className="flex gap-4">
-            <a className="transition-colors hover:text-primary" href="#">
+            <Link className="transition-colors hover:text-primary" to="/privacy">
               Privacy
-            </a>
+            </Link>
             <Link className="transition-colors hover:text-primary" to="/terms">
               Terms
             </Link>

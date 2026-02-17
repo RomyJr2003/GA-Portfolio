@@ -8,6 +8,7 @@ import TermsAndConditions from './footercontent/terms.jsx';
 import PreLoading from './components/preloading.jsx';
 import Designs from './components/designs.jsx';
 import ScrollToTop from './components/ScrollToTop.jsx';
+import PrivacyPolicy from './footercontent/privacyPolicy.jsx';
 
 function App() {
   // Move preloading state here so it persists across page navigation
@@ -50,6 +51,7 @@ function App() {
           <Route path="/designs" element={<Designs />} />
           <Route path="/contact" element={<Contacts />} />
           <Route path="/terms" element={<TermsAndConditions />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
         </Route>
       </Routes>
     </>
