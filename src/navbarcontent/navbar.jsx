@@ -97,9 +97,6 @@ function Navbar() {
             >
               About
             </Link>
-            <a className="text-sm font-medium text-gray-700 transition-colors hover:text-primary dark:text-gray-200" href="#">
-              Services
-            </a>
             <Link className="text-sm font-medium text-gray-700 transition-colors hover:text-primary dark:text-gray-200" to="/contact">
               Contact
             </Link>

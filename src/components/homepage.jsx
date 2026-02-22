@@ -111,8 +111,8 @@ function Homepage() {
               <button className="rounded-full bg-primary px-8 py-3 font-bold text-white shadow-lg shadow-primary/25 transition-all hover:-translate-y-1 hover:bg-primary/90">
                 <Link to="/designs">View My Work</Link>
               </button>
-              <button className="rounded-full border border-gray-200 bg-white px-8 py-3 font-bold text-gray-800 shadow-sm transition-all hover:-translate-y-1 hover:bg-gray-50 dark:border-white/10 dark:bg-white/10 dark:text-black">
-                About Me
+              <button className="rounded-full cursor-pointer border border-gray-200 bg-white px-8 py-3 font-bold text-gray-800 shadow-sm transition-all hover:-translate-y-1 hover:bg-gray-50 dark:border-white/10 dark:bg-white/10 dark:text-black">
+                <Link to="/about">About Me</Link>
               </button>
             </div>
           </div>
@@ -453,7 +453,7 @@ function Homepage() {
                 </div>
                 <button className="mx-auto flex items-center gap-2 font-bold text-primary transition-all hover:gap-3 md:mx-0">
                   For inquiries click here
-                  <span className="material-symbols-outlined text-sm">
+                  <span className="material-symbols-outlined text-sm cursor-pointer">
                     arrow_forward
                   </span>
                 </button>
@@ -479,27 +479,20 @@ function Homepage() {
           </div>
           <div className="flex flex-col items-center gap-6 md:items-end">
             <div className="flex gap-6">
-              <a className="text-sm font-bold text-gray-600 transition-colors hover:text-primary dark:text-gray-400" href="/">
+              <Link className="text-sm font-bold text-gray-600 transition-colors hover:text-primary dark:text-gray-400" to="/">
                 Home
-              </a>
-              <a className="text-sm font-medium text-gray-700 transition-colors hover:text-primary dark:text-gray-200" href="/about">
+              </Link>
+              <Link className="text-sm font-medium text-gray-700 transition-colors hover:text-primary dark:text-gray-400" to="/about">
                 About
-              </a>
-              <a className="text-sm font-bold text-gray-600 transition-colors hover:text-primary dark:text-gray-400" href="#">
-                Services
-              </a>
-              <a className="text-sm font-bold text-gray-600 transition-colors hover:text-primary dark:text-gray-400" href="#">
-                Shop
-              </a>
+              </Link>
+              <Link className="text-sm font-bold text-gray-600 transition-colors hover:text-primary dark:text-gray-400" to="/contact">
+                Contact
+              </Link>
             </div>
             <div className="flex gap-4">
               <a className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-gray-600 transition-all hover:bg-primary hover:text-white dark:bg-white/5 dark:text-gray-300" href="https://www.instagram.com/jrfrmntr">
-                <svg aria-hidden="true" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    clipRule="evenodd"
-                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772 4.902 4.902 0 011.772-1.153c.636-.247 1.363-.416 2.427-.465C9.673 2.013 10.03 2 12.48 2h-.165zm-3.77 4.962a7.484 7.484 0 01-.043.911v.006a7.484 7.484 0 01-.6 1.568l.004-.008a7.484 7.484 0 01-1.062 1.472l-.003.002a7.484 7.484 0 01-1.472 1.062l-.002.003a7.484 7.484 0 01-1.568.6l.008-.004a7.484 7.484 0 01-.911.043h.006L2 12.685v.63c0 2.507.012 2.873.06 3.935.048 1.034.214 1.708.452 2.304a4.114 4.114 0 00.957 1.488 4.114 4.114 0 001.488.957c.596.238 1.27.404 2.304.452 1.062.048 1.428.06 3.935.06h.63c2.507 0 2.873-.012 3.935-.06 1.034-.048 1.708-.214 2.304-.452a4.114 4.114 0 001.488-.957 4.114 4.114 0 00.957-1.488c.238-.596.404-1.27.452-2.304.048-1.062.06-1.428.06-3.935v-.63c0-2.507-.012-2.873-.06-3.935-.048-1.034-.214-1.708-.452-2.304a4.114 4.114 0 00-.957-1.488 4.114 4.114 0 00-1.488-.957c-.596-.238-1.27-.404-2.304-.452-1.062-.048-1.428-.06-3.935-.06h-.63zM12 5.833a6.167 6.167 0 110 12.334 6.167 6.167 0 010-12.334zm0 2a4.167 4.167 0 100 8.334 4.167 4.167 0 000-8.334zm6.666-2.583a1.333 1.333 0 110 2.666 1.333 1.333 0 010-2.666z"
-                    fillRule="evenodd"
-                  />
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M16 7a1 1 0 1 1 2 0a1 1 0 0 1-2 0"/><path fill="currentColor" fill-rule="evenodd" d="M12 7.25a4.75 4.75 0 1 0 0 9.5a4.75 4.75 0 0 0 0-9.5M8.75 12a3.25 3.25 0 1 1 6.5 0a3.25 3.25 0 0 1-6.5 0" clip-rule="evenodd"/><path fill="currentColor" fill-rule="evenodd" d="M17.258 2.833a47.7 47.7 0 0 0-10.516 0c-2.012.225-3.637 1.81-3.873 3.832a46 46 0 0 0 0 10.67c.236 2.022 1.86 3.607 3.873 3.832a47.8 47.8 0 0 0 10.516 0c2.012-.225 3.637-1.81 3.873-3.832a46 46 0 0 0 0-10.67c-.236-2.022-1.86-3.607-3.873-3.832m-10.35 1.49a46.2 46.2 0 0 1 10.184 0c1.33.15 2.395 1.199 2.55 2.517a44.4 44.4 0 0 1 0 10.32a2.89 2.89 0 0 1-2.55 2.516a46.2 46.2 0 0 1-10.184 0a2.89 2.89 0 0 1-2.55-2.516a44.4 44.4 0 0 1 0-10.32a2.89 2.89 0 0 1 2.55-2.516" clip-rule="evenodd"/>
                 </svg>
               </a>
               <a className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-gray-600 transition-all hover:bg-primary hover:text-white dark:bg-white/5 dark:text-gray-300" href="https://www.behance.net/romyformentera">

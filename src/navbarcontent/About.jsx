@@ -7,7 +7,7 @@ function About() {
         <div className="flex flex-col gap-6 md:flex-row md:items-start">
           <img className="h-50 w-40 rounded-2xl object-cover md:h-64 md:w-48" src={r23} alt="Romy" />
           <div className="flex-1">
-            <h1 className="mb-4 text-5xl font-black text-gray-900 dark:text-white font-body">
+            <h1 className="mb-4 text-5xl font-black text-gray-900 dark:text-white font-bungee">
               Hello, I'm Romy!
             </h1>
             <p className="text-base font-medium text-gray-600 dark:text-gray-300">
@@ -36,6 +36,19 @@ function About() {
             Bachelor of Science in Information Technology<br />
             Benedicto College<br />
             2022 - 2026
+          </p>
+          <p className="pt-2 text-sm font-medium text-gray-600 dark:text-gray-300">
+            General Academic Strand - GAS<br />
+            Cabancalan National High School<br />
+            2020 - 2022
+          </p>
+          <p className="pt-2 text-sm font-medium text-gray-600 dark:text-gray-300">
+            Banilad National High School<br />
+            2016 - 2020
+          </p>
+          <p className="pt-2 text-sm font-medium text-gray-600 dark:text-gray-300">
+            Subangdaku Elementary School<br />
+            2009 - 2016
           </p>
           </div>
           <div className="flex-1">

@@ -1,5 +1,6 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Molle:ital@1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -13,6 +14,7 @@
   --color-sky: #3DB2B6;
   --font-display: "Spline Sans", sans-serif;
   --font-body: "Molle", cursive;
+  --font-bungee: "Bungee", sans-serif;
   --font-head: "Gabarito", san-serif;
   --radius: 1rem;
   --radius-lg: 2rem;
