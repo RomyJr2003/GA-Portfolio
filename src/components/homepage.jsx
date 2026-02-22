@@ -454,7 +454,7 @@ function Homepage() {
                 <button className="mx-auto flex items-center gap-2 font-bold text-primary transition-all hover:gap-3 md:mx-0">
                   For inquiries click here
                   <span className="material-symbols-outlined text-sm cursor-pointer">
-                    arrow_forward
+                    <Link to="/contact">arrow_forward</Link>
                   </span>
                 </button>
               </div>

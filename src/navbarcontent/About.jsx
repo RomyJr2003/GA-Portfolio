@@ -24,6 +24,23 @@ function About() {
             </div>
           </div>
         </div>
+        <div className="flex-1">
+          <p className="pt-2 text-sm font-medium text-gray-600 dark:text-gray-300">Personal Skills:</p>
+            <div className="item-start mt-2 flex gap-2">
+              <div className="rounded-xl border border-solid">
+                <p className="text-center text-sm m-3 text-gray-600 dark:text-gray-300">Creativity</p>
+              </div>
+              <div className="rounded-xl border border-solid">
+                <p className="text-center text-sm m-3 text-gray-600 dark:text-gray-300">Adaptive</p>
+              </div>
+              <div className="rounded-xl border border-solid">
+                <p className="text-center text-sm m-3 text-gray-600 dark:text-gray-300">Time Management</p>
+              </div>
+              <div className="rounded-xl border border-solid">
+                <p className="text-center text-sm m-3 text-gray-600 dark:text-gray-300">Team Work</p>
+              </div>
+            </div>
+        </div>
         <div className="flex flex-col gap-6 md:flex-row md:items-start">
           <div className="flex-1">
           <h1 className="flex items-center gap-2 pt-8 text-xl font-bold text-gray-900 dark:text-white">
