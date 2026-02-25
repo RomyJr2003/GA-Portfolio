@@ -63,8 +63,7 @@ function Designs() {
                 Recent Works
               </h2>
               <p className="text-gray-600 dark:text-gray-400">
-                Not everything needs a client. My laboratory is where i break rules,<br></br>
-                test new render engines, and explore the weird side of digital art.
+                Here are my recent works for Social Media Posters, Ads Posters, and Events Posters.
               </p>
             </div>
           </div>
@@ -72,13 +71,13 @@ function Designs() {
           <div className="grid grid-cols-1 gap-8 px-4 sm:grid-cols-2 lg:grid-cols-3">
             <div 
               className="group flex cursor-pointer flex-col gap-4"
-              onClick={() => openModal('pizza.jpg')}
+              onClick={() => openModal('KEEPSAFE.jpg')}
             >
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[3rem] bg-white shadow-lg transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-xl dark:bg-[#12363a]">
                 <img
                   alt="Pizza"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  src="pizza.jpg"
+                  src="KEEPSAFE.jpg"
                 />
                 <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/50 to-transparent p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   <span className="rounded-full bg-white px-4 py-2 text-sm font-bold text-black">
@@ -98,13 +97,13 @@ function Designs() {
 
             <div 
               className="group flex cursor-pointer flex-col gap-4 sm:mt-12 lg:mt-0"
-              onClick={() => openModal('CEBU64.jpg')}
+              onClick={() => openModal('SeminarPoster2.jpg')}
             >
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[3rem] bg-white shadow-lg transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-xl dark:bg-[#12363a]">
                 <img
                   alt="Poster"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  src="CEBU64.jpg"
+                  src="SeminarPoster2.jpg"
                 />
                 <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/50 to-transparent p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   <span className="rounded-full bg-white px-4 py-2 text-sm font-bold text-black">
@@ -114,23 +113,23 @@ function Designs() {
               </div>
               <div className="text-center">
                 <h3 className="text-xl font-bold transition-colors group-hover:text-primary">
-                  Event Poster
+                  Seminar Poster
                 </h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Photography
+                  Photoshop
                 </p>
               </div>
             </div>
 
             <div 
               className="group flex cursor-pointer flex-col gap-4"
-              onClick={() => openModal('burger.jpg')}
+              onClick={() => openModal('capstoneposter.jpg')}
             >
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[3rem] bg-white shadow-lg transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-xl dark:bg-[#12363a]">
                 <img
                   alt="Arrangement of colorful roses and flowers on a pink background"
                   className="burger"
-                  src="burger.jpg"
+                  src="capstoneposter.jpg"
                 />
                 <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/50 to-transparent p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   <span className="rounded-full bg-white px-4 py-2 text-sm font-bold text-black">
@@ -140,23 +139,23 @@ function Designs() {
               </div>
               <div className="text-center">
                 <h3 className="text-xl font-bold transition-colors group-hover:text-primary">
-                  Food Tarpaulin
+                  Research Congress Poster
                 </h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Visual Identity
+                  Won in Best in Poster (Illustrator)
                 </p>
               </div>
             </div>
 
             <div 
               className="group flex cursor-pointer flex-col gap-4 sm:mt-12 lg:mt-0"
-              onClick={() => openModal('CEBU64.jpg')}
+              onClick={() => openModal('Thumbnail.jpg')}
             >
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[3rem] bg-white shadow-lg transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-xl dark:bg-[#12363a]">
                 <img
                   alt="Poster"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  src="CEBU64.jpg"
+                  src="Thumbnail.jpg"
                 />
                 <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/50 to-transparent p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   <span className="rounded-full bg-white px-4 py-2 text-sm font-bold text-black">
@@ -166,23 +165,23 @@ function Designs() {
               </div>
               <div className="text-center">
                 <h3 className="text-xl font-bold transition-colors group-hover:text-primary">
-                  Event Poster
+                  Polo T-Shirt Mockup Behance Thumbnail
                 </h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Photography
+                  Photoshop
                 </p>
               </div>
             </div>
 
             <div 
               className="group flex cursor-pointer flex-col gap-4 sm:mt-12 lg:mt-0"
-              onClick={() => openModal('CEBU64.jpg')}
+              onClick={() => openModal('qnthumbnail2.jpg')}
             >
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[3rem] bg-white shadow-lg transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-xl dark:bg-[#12363a]">
                 <img
                   alt="Poster"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  src="CEBU64.jpg"
+                  src="qnthumbnail2.jpg"
                 />
                 <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/50 to-transparent p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   <span className="rounded-full bg-white px-4 py-2 text-sm font-bold text-black">
@@ -192,23 +191,23 @@ function Designs() {
               </div>
               <div className="text-center">
                 <h3 className="text-xl font-bold transition-colors group-hover:text-primary">
-                  Event Poster
+                  Polo T-Shirt Mockup Behance Thumbnail
                 </h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Photography
+                  Photoshop
                 </p>
               </div>
             </div>
             
             <div 
               className="group flex cursor-pointer flex-col gap-4 sm:mt-12 lg:mt-0"
-              onClick={() => openModal('CEBU64.jpg')}
+              onClick={() => openModal('servicesposter.jpg')}
             >
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[3rem] bg-white shadow-lg transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-xl dark:bg-[#12363a]">
                 <img
                   alt="Poster"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  src="CEBU64.jpg"
+                  src="servicesposter.jpg"
                 />
                 <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/50 to-transparent p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   <span className="rounded-full bg-white px-4 py-2 text-sm font-bold text-black">
@@ -218,10 +217,10 @@ function Designs() {
               </div>
               <div className="text-center">
                 <h3 className="text-xl font-bold transition-colors group-hover:text-primary">
-                  Event Poster
+                  Services Poster
                 </h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Photography
+                  Illustrator
                 </p>
               </div>
             </div>

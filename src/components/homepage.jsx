@@ -244,10 +244,10 @@ function Homepage() {
               </div>
               <div className="text-center">
                 <h3 className="text-xl font-bold transition-colors group-hover:text-primary">
-                  Food Tarpaulin
+                  Food Advertisement
                 </h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Visual Identity
+                  Illustrator
                 </p>
               </div>
             </div>
@@ -273,20 +273,20 @@ function Homepage() {
                   Event Poster
                 </h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Photography
+                  Photoshop and Illustrator
                 </p>
               </div>
             </div>
 
             <div 
               className="group flex cursor-pointer flex-col gap-4 sm:mt-0 lg:mt-12"
-              onClick={() => openModal('https://lh3.googleusercontent.com/aida-public/AB6AXuB1P2hUYpG6TswPUAMThA1Ab70lrbiKVtTLjQZgHYV6bGbdAwmjvornVlMR2KIBslRTdPF0aXaddRHvI1wqN8vklB53w2ZEa0_k0kwRl78HzuoQqUXyFVd_I3TFYqMVODZSIGtiXFHvYTPLyyXnOPht9_aWWTIafqWkM34yJNGAA7EQDUGJfV3MDkjCMk7lR482QNjK7JuNUxz7CfcZj_8BY3gNKbmxUd9Lm0j1lOI0HmtwniRO8nm6EPLMVeLD6GvxP5kjrOctUPFf')}
+              onClick={() => openModal('white.png')}
             >
               <div className="relative aspect-square w-full overflow-hidden rounded-full border-8 border-white shadow-lg transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-xl dark:border-[#12363a]">
                 <img
                   alt="Yellow and pink abstract fluid painting texture"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1P2hUYpG6TswPUAMThA1Ab70lrbiKVtTLjQZgHYV6bGbdAwmjvornVlMR2KIBslRTdPF0aXaddRHvI1wqN8vklB53w2ZEa0_k0kwRl78HzuoQqUXyFVd_I3TFYqMVODZSIGtiXFHvYTPLyyXnOPht9_aWWTIafqWkM34yJNGAA7EQDUGJfV3MDkjCMk7lR482QNjK7JuNUxz7CfcZj_8BY3gNKbmxUd9Lm0j1lOI0HmtwniRO8nm6EPLMVeLD6GvxP5kjrOctUPFf"
+                  src="white.png"
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   <span className="material-symbols-outlined text-4xl text-white">
@@ -296,23 +296,23 @@ function Homepage() {
               </div>
               <div className="text-center">
                 <h3 className="text-xl font-bold transition-colors group-hover:text-primary">
-                  Sunny Days
+                  Personal Logo
                 </h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Art Direction
+                  Illustrator
                 </p>
               </div>
             </div>
             
             <div 
               className="group flex cursor-pointer flex-col gap-4 sm:mt-12 lg:mt-0"
-              onClick={() => openModal('CEBU64.jpg')}
+              onClick={() => openModal('hiringposter.jpg')}
             >
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[3rem] bg-white shadow-lg transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-xl dark:bg-[#12363a]">
                 <img
                   alt="Poster"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  src="CEBU64.jpg"
+                  src="hiringposter.jpg"
                 />
                 <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/50 to-transparent p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   <span className="rounded-full bg-white px-4 py-2 text-sm font-bold text-black">
@@ -322,10 +322,10 @@ function Homepage() {
               </div>
               <div className="text-center">
                 <h3 className="text-xl font-bold transition-colors group-hover:text-primary">
-                  Event Poster
+                  Hiring Poster
                 </h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Photography
+                  Illustrator
                 </p>
               </div>
             </div>
