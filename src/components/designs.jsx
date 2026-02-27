@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom'
 
 function Designs() {
+  const location = useLocation()
   const [selectedImage, setSelectedImage] = useState(null)
 
   // Function to open modal with image
@@ -21,6 +23,27 @@ function Designs() {
     window.addEventListener('keydown', handleEscape)
     return () => window.removeEventListener('keydown', handleEscape)
   }, [])
+
+   useEffect(() => {
+    const elements = document.querySelectorAll('[data-animate]')
+    if (!elements.length) return undefined
+
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible')
+            obs.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.2 },
+    )
+
+    elements.forEach((el) => observer.observe(el))
+
+    return () => observer.disconnect()
+  }, [location.pathname])
 
   return (
     <main className="relative mx-auto flex w-full max-w-7xl flex-grow flex-col items-center px-4 pb-20 pt-24 sm:px-6 sm:pt-10 lg:px-8">
@@ -53,7 +76,7 @@ function Designs() {
       )}
 
       {/* Projects */}
-      <section className="relative w-full max-w-[960px] py-10">
+      <section className="relative animate-on-scroll w-full max-w-[960px] py-10" data-animate>
           <div className="mb-10 flex items-end justify-between px-4 pt-20">
             <div>
               <h2 className="mb-2 flex items-center gap-2 text-3xl font-bold">
