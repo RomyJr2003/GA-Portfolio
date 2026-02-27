@@ -28,16 +28,16 @@ function About() {
           <p className="pt-2 text-sm font-medium text-gray-600 dark:text-gray-300">Personal Skills:</p>
             <div className="item-start mt-2 flex gap-2">
               <div className="rounded-xl border border-solid">
-                <p className="text-center text-sm m-3 text-gray-600 dark:text-gray-300">Creativity</p>
+                <p className="text-center text-[12px] m-2 text-gray-600 dark:text-gray-300">Creativity</p>
               </div>
               <div className="rounded-xl border border-solid">
-                <p className="text-center text-sm m-3 text-gray-600 dark:text-gray-300">Adaptive</p>
+                <p className="text-center text-[12px] m-2 text-gray-600 dark:text-gray-300">Adaptive</p>
               </div>
               <div className="rounded-xl border border-solid">
-                <p className="text-center text-sm m-3 text-gray-600 dark:text-gray-300">Time Management</p>
+                <p className="text-center text-[12px] m-2 text-gray-600 dark:text-gray-300">Time Management</p>
               </div>
               <div className="rounded-xl border border-solid">
-                <p className="text-center text-sm m-3 text-gray-600 dark:text-gray-300">Team Work</p>
+                <p className="text-center text-[12px] m-2 text-gray-600 dark:text-gray-300">Team Work</p>
               </div>
             </div>
         </div>

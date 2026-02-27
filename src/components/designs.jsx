@@ -90,7 +90,7 @@ function Designs() {
                   Social Media Poster
                 </h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Photoshop &amp; Illustrator
+                  Photoshop
                 </p>
               </div>
             </div>

@@ -332,9 +332,9 @@ function Homepage() {
           </div>
 
           <div className="mt-10 flex justify-center sm:hidden">
-            <a className="rounded-full border border-primary/20 bg-white px-6 py-3 text-sm font-bold text-primary shadow-md dark:bg-[#12363a]" href="#">
+            <Link className="rounded-full border border-primary/20 bg-white px-6 py-3 text-sm font-bold text-primary shadow-md dark:bg-[#12363a]" to="/designs">
               See All Projects
-            </a>
+            </Link>
           </div>
         </section>
         {/*Software Skills - Infinite Scroll Carousel*/}
@@ -482,7 +482,7 @@ function Homepage() {
               <Link className="text-sm font-bold text-gray-600 transition-colors hover:text-primary dark:text-gray-400" to="/">
                 Home
               </Link>
-              <Link className="text-sm font-medium text-gray-700 transition-colors hover:text-primary dark:text-gray-400" to="/about">
+              <Link className="text-sm font-bold text-gray-700 transition-colors hover:text-primary dark:text-gray-400" to="/about">
                 About
               </Link>
               <Link className="text-sm font-bold text-gray-600 transition-colors hover:text-primary dark:text-gray-400" to="/contact">
