@@ -1,9 +1,34 @@
 import r23 from '../assets/r23.jpg'
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 
 function About() {
+  const location = useLocation()
+  
+  useEffect(() => {
+    const elements = document.querySelectorAll('[data-animate]')
+    if (!elements.length) return undefined
+
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible')
+            obs.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.2 },
+    )
+
+    elements.forEach((el) => observer.observe(el))
+
+    return () => observer.disconnect()
+  }, [location.pathname])
+
   return (
     <main className="mx-auto w-full max-w-[960px] px-4 pb-20 pt-35 sm:px-6 lg:px-8">
-      <div className="rounded-3xl border border-white/60 bg-white/80 p-8 shadow-xl backdrop-blur-md dark:border-white/10 dark:bg-[#12363a]/80">
+      <div className="rounded-3xl animate-on-scroll border border-white/60 bg-white/80 p-8 shadow-xl backdrop-blur-md dark:border-white/10 dark:bg-[#12363a]/80" data-animate>
         <div className="flex flex-col gap-6 md:flex-row md:items-start">
           <img className="h-50 w-40 rounded-2xl object-cover md:h-64 md:w-48" src={r23} alt="Romy" />
           <div className="flex-1">

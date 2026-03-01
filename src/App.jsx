@@ -1,4 +1,6 @@
 ﻿import { useState, useEffect } from 'react';
+import { Toaster } from "sileo";
+import "sileo/styles.css";
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './navbarcontent/navbar.jsx';
 import Homepage from './components/homepage.jsx';
@@ -54,6 +56,8 @@ function App() {
           <Route path="/privacy" element={<PrivacyPolicy />} />
         </Route>
       </Routes>
+      
+      <Toaster position="top-center"/>
     </>
   );
 }
