@@ -52,16 +52,16 @@ function About() {
         <div className="flex-1">
           <p className="pt-2 text-sm font-medium text-gray-600 dark:text-gray-300">Personal Skills:</p>
             <div className="item-start mt-2 flex gap-2">
-              <div className="rounded-xl border border-solid">
+              <div className="rounded-xl border border-solid text-gray-300">
                 <p className="text-center text-[12px] m-2 text-gray-600 dark:text-gray-300">Creativity</p>
               </div>
-              <div className="rounded-xl border border-solid">
+              <div className="rounded-xl border border-solid text-gray-300">
                 <p className="text-center text-[12px] m-2 text-gray-600 dark:text-gray-300">Adaptive</p>
               </div>
-              <div className="rounded-xl border border-solid">
+              <div className="rounded-xl border border-solid text-gray-300">
                 <p className="text-center text-[12px] m-2 text-gray-600 dark:text-gray-300">Time Management</p>
               </div>
-              <div className="rounded-xl border border-solid">
+              <div className="rounded-xl border border-solid text-gray-300">
                 <p className="text-center text-[12px] m-2 text-gray-600 dark:text-gray-300">Team Work</p>
               </div>
             </div>

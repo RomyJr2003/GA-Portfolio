@@ -71,7 +71,7 @@ function TermsAndConditions() {
             <ul className="list-disc px-5">
               <li className="pb-3"><b>Name:</b> Romy A. Formentera Jr.</li>
               <li className="pb-3"><b>Email:</b> romyformentera123@gmail.com</li>
-              <li className="pb-5"><b>Website:</b> devr23-portfolio-web.app</li>
+              <li className="pb-5"><b>Website:</b> romyjr23-portfolio-web.app</li>
             </ul>
           </div>
         </div>

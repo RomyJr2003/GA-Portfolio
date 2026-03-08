@@ -67,7 +67,7 @@ function Contacts() {
   return (
     <main className="relative mx-auto flex w-full max-w-7xl flex-grow flex-col items-center px-4 pb-20 pt-[35px] sm:px-6 sm:pt-10 lg:px-8">
       <div className="w-full max-w-[960px] pt-25">
-        <div className="rounded-3xl animate-on-scroll border border-white/60 bg-white/80 p-8 shadow-xl backdrop-blur-md dark:border-white/10 dark:bg-[#12363a]/80" data-animate>
+        <div className="rounded-3xl animate-on-scroll shrink border border-white/60 bg-white/80 p-8 shadow-xl backdrop-blur-md dark:border-white/10 dark:bg-[#12363a]/80" data-animate>
           <h1 className="mb-1 text-left text-5xl font-black text-gray-900 dark:text-white font-head">
             DROP
           </h1>
@@ -123,7 +123,7 @@ function Contacts() {
               type="submit"
               disabled={isSending}
               className="w-80 rounded-lg bg-primary py-3 font-bold text-white transition hover:bg-primary/90 disabled:opacity-50
-              text-center"
+              text-center cursor-progress"
             >
               {isSending ? "Sending..." : "Send Message"}
             </button>

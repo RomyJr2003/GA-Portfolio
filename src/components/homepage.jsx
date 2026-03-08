@@ -111,7 +111,7 @@ function Homepage() {
               <button className="rounded-full bg-primary px-8 py-3 font-bold text-white shadow-lg shadow-primary/25 transition-all hover:-translate-y-1 hover:bg-primary/90">
                 <Link to="/designs">View My Work</Link>
               </button>
-              <button className="rounded-full cursor-pointer border border-gray-200 bg-white px-8 py-3 font-bold text-gray-800 shadow-sm transition-all hover:-translate-y-1 hover:bg-gray-50 dark:border-white/10 dark:bg-white/10 dark:text-black">
+              <button className="rounded-full cursor-pointer border border-gray-200 bg-white px-8 py-3 font-bold text-gray-800 shadow-sm transition-all hover:-translate-y-1 hover:bg-gray-50 dark:border-white/10 dark:bg-white/10 dark:text-gray-500">
                 <Link to="/about">About Me</Link>
               </button>
             </div>
@@ -341,8 +341,8 @@ function Homepage() {
         <section className="w-full overflow-hidden py-10">
           <div className="relative">
             {/* Gradient overlays for fade effect */}
-            <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-32 bg-gradient-to-r from-[#ccf8d5] dark:from-[#0f1f2b]"></div>
-            <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-32 bg-gradient-to-l from-[#ccf8d5] dark:from-[#0f1f2b]"></div>
+            <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-40 bg-gradient-to-r from-[#c8f7d2] via-[#c8f7d2]/50 to-transparent dark:from-[#0f1f2b] dark:via-[#0f1f2b]/50"></div>
+            <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-40 bg-gradient-to-l from-[#c8f7d2] via-[#c8f7d2]/50 to-transparent dark:from-[#0f1f2b] dark:via-[#0f1f2b]/50"></div>
             
             {/* Scrolling container */}
             <div className="flex items-center animate-scroll gap-16">

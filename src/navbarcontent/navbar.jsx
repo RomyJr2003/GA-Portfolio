@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, Outlet } from 'react-router-dom'
+import { sileo } from 'sileo'
 
 function Navbar() {
   const [isDark, setIsDark] = useState(() => {
@@ -102,7 +103,21 @@ function Navbar() {
             </Link>
           </div>
           <div className="hidden items-center gap-2 sm:flex">
-            <button onClick={handleDownload} className="flex items-center justify-center rounded-full bg-primary px-5 py-2 text-sm font-bold text-white shadow-md transition-all hover:scale-105 hover:shadow-lg active:scale-95 cursor-pointer">
+            <button 
+              onClick={() => {
+                handleDownload();
+                sileo.show({
+                  title: "Success!",
+                  description: "Resume downloaded successfully.",
+                  type: "success",
+                  duration: 3000,
+                  styles: {
+                    description: "text-neutral-500!",
+                  },
+                });
+              }} 
+              className="flex items-center justify-center rounded-full bg-primary px-5 py-2 text-sm font-bold text-white shadow-md transition-all hover:scale-105 hover:shadow-lg active:scale-95 cursor-pointer"
+            >
               Download Resume
             </button>
             <button
@@ -192,7 +207,18 @@ function Navbar() {
             Contact
           </Link>
         </nav>
-        <button onClick={handleDownload} className="mt-8 w-full rounded-full bg-primary px-5 py-3 text-sm font-bold text-white shadow-md transition-all hover:shadow-lg cursor-pointer">
+        <button 
+          onClick={() => {
+            handleDownload();
+            sileo.show({
+              title: "Success!",
+              description: "Resume downloaded successfully",
+              type: "success",
+              duration: 3000
+            });
+          }} 
+          className="mt-8 w-full rounded-full bg-primary px-5 py-3 text-sm font-bold text-white shadow-md transition-all hover:shadow-lg cursor-pointer"
+        >
           Download Resume
         </button>
       </aside>
