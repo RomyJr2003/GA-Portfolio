@@ -196,9 +196,6 @@ function Navbar() {
           >
             About
           </Link>
-          <a className="text-base font-semibold text-gray-700 hover:text-primary dark:text-gray-200" href="#">
-            Services
-          </a>
           <Link
             className="text-base font-semibold text-gray-700 hover:text-primary dark:text-gray-200"
             onClick={() => setIsMenuOpen(false)}
